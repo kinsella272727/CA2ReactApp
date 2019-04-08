@@ -12,7 +12,7 @@ class UserList extends Component {
   }
 
   componentDidMount() {
-    axios.get('api/users')
+    axios.get('/api/users')
       .then(response =>{
         this.setState({ users: response.data });
       })
@@ -32,15 +32,19 @@ class UserList extends Component {
     ));
 
     return (
-      <div>
-        <Link to={'/create-book'}>
-          <button type="button">
-            Create new Book
-          </button>
-        </Link>
-        
-        <h2>All Users</h2>
+      <div class="container">
+        <h2 class="col">All Users</h2>
         <div>{userList}</div>
+        
+        <div class="row">
+          <div class="col">
+            <Link to={'/create-book'}>
+              <button type="button" class="btn btn-primary">
+            Create new Book
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

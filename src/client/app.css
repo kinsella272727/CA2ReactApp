@@ -1,4 +1,18 @@
 body {
-  text-align: center;
   margin: auto;
+  background-color: #282c34;
+  color: white;
+
+}
+/*
+col {
+  background-color: grey;
+} */
+
+#books {
+  text-align: center;
+}
+
+#bookCard {
+  background-color: lightgrey;
 }

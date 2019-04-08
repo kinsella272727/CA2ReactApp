@@ -18,7 +18,7 @@ class BookList extends Component {
 
   componentDidMount() {
     this._isMounted = true;
-    axios.get(`api/users/${this.props.match.params.id}/books`)
+    axios.get(`/api/users/${this.props.match.params.id}/books`)
       .then(response => {
         this.setState({ books: response.data });
       })
@@ -28,7 +28,7 @@ class BookList extends Component {
   }
 
   updateUsers() {
-    axios.get(`api/users/${this.props.match.params.id}/books`)
+    axios.get(`/api/users/${this.props.match.params.id}/books`)
       .then(response => {
         this.setState({ books: response.data});
       })
@@ -39,7 +39,7 @@ class BookList extends Component {
 
   handleDelete(bookId) {
     axios
-      .delete('api/books', {
+      .delete('/api/books', {
         data: {
           id: bookId
         }
@@ -68,7 +68,7 @@ class BookList extends Component {
     ));
 
     return (
-      <div>
+      <div class="container">
         {bookLists.length ?
           <div>
             <h2>All Books</h2>
@@ -81,16 +81,20 @@ class BookList extends Component {
 
 const Book = (props) => {
   return (
-    <div>
-      <button type="button" onClick={() => {props.handleDelete(props.id);}}>
-        Delete
-      </button>
-      <Link to={`/edit/${props.id}`}>
-        <button type="button">
-        Edit Book
-        </button>
-      </Link>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-info" onClick={() => {props.handleDelete(props.id);}}>
+            Delete
+          </button>
 
+          <Link to={`/edit/${props.id}`}>
+            <button type="button" class="btn btn-info">
+          Edit Book
+            </button>
+          </Link>
+        </div>
+      </div>
       <h2>{props.title}</h2>
       <p>{props.author}</p>
     </div>

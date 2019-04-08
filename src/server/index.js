@@ -9,8 +9,8 @@ const User = require('./models/User');
 
 const app = express();
 
+// const mongo_uri = process.env.MONGODB_URL || 'mongodb://localhost/REACTCA2';
 const mongo_uri = process.env.MONGODB_URL || 'mongodb://localhost/REACTCA2';
-
 mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
   if (err) {
     throw err;
