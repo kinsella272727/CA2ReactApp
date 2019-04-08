@@ -1,0 +1,30 @@
+{
+    "_id" : ObjectId("5ca4c2007b9ea23d24035ed0"),
+    "title" : "Harry Potter and the Philosopher's Stone",
+    "author" : "J.K. Rowling",
+    "user_id" : ObjectId("5c8134e728e9951e855ad6d7")
+}
+{
+    "_id" : ObjectId("5cab7e2f254bfb9d5300b041"),
+    "title" : "A Game of Thrones",
+    "author" : "George R.R. Martin",
+    "user_id" : ObjectId("5c8134e728e9951e855ad6d5")
+}
+{
+    "_id" : ObjectId("5cab7e94254bfb9d5300b06c"),
+    "title" : "Dracula",
+    "author" : "Bram Stoker",
+    "user_id" : ObjectId("5c8134e728e9951e855ad6d9")
+}
+{
+    "_id" : ObjectId("5cab7ee9254bfb9d5300b091"),
+    "title" : "To Kill a Mockingbird",
+    "author" : "Harper Lee",
+    "user_id" : ObjectId("5c813817a8de91465046d882")
+}
+{
+    "_id" : ObjectId("5cab7f49254bfb9d5300b0b7"),
+    "title" : "Animal Farm",
+    "author" : "George Orwell",
+    "user_id" : ObjectId("5c8144f3a8de91465046d883")
+}
